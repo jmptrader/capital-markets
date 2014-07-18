@@ -1,0 +1,53 @@
+@import 'variables.scss';
+
+#mobile-sideOption {
+    position: fixed;
+    display: block;
+    height: auto;    
+    z-index: 9999;
+    background-color: $white;
+    top: 5px;
+    left: 5px;
+    #show-listTrigger {
+        position: absolute;        
+        width: 51px;
+        height: 51px;        
+        border: 1px solid $gray;        
+        background: rgba(255, 255, 255, 0.90);
+        top: 5px;
+        left: 5px;
+        padding-top: 12px;
+        &:hover {
+            cursor: pointer;                        
+            background-color: $white !important;
+            background: transparent;
+        }
+        i { color: $gray; }
+    }
+    ul {
+        margin: 0px;
+        border: 1px solid $gray;        
+        li {                                
+            border-bottom: 1px solid $gray;
+            &:last-child{ border-bottom: none; }
+            a { text-decoration: none;}
+            a, span.title {
+                padding: 16px 12px;
+                display: block;
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: $screen-sm-min) {
+    #mobile-sideOption {
+        ul { display: none; }    
+    }    
+}
+
+@media screen and (max-width: $screen-sm-min) {
+    #mobile-sideOption {        
+        ul { display: none; }
+    }    
+}
